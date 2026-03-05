@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazell Arrafi — Data Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">GA<span class="accent">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#education" data-i18n="nav.education">Education</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-icon" id="langToggle" title="Switch Language" aria-label="Switch Language">
+                    <span class="lang-label">EN</span>
+                </button>
+                <button class="btn-icon" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                </button>
+                <button class="btn-hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="hero.badge">Open to Work</div>
+            <h1 class="hero-title">
+                <span class="hero-greeting" data-i18n="hero.greeting">Hi, I'm</span>
+                <span class="hero-name">Muhammad Gazell<br>Arrafi Asmara</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typed-text" id="typedText"></span>
+                <span class="typed-cursor">|</span>
+            </p>
+            <p class="hero-desc" data-i18n="hero.desc">Transforming raw data into structured, insight-ready datasets through automated pipelines, NLP models, and large-scale web scraping.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">View My Work</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.cta2">Get In Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-label" data-i18n="hero.stat1">Major Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="300" data-suffix="K+">0</span>
+                    <span class="stat-label" data-i18n="hero.stat2">Records Processed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10" data-suffix="+">0</span>
+                    <span class="stat-label" data-i18n="hero.stat3">Tools & Technologies</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-i18n="about.p1">Informatics graduate from Telkom University (GPA 3.68/4.00) with hands-on experience in Python, web scraping, data automation, and NLP. I specialize in building end-to-end data pipelines — from collecting raw data at scale to producing structured, insight-ready datasets.</p>
+                    <p data-i18n="about.p2">Currently working as a Data Automation & NLP Engineer at SocialX, where I design automated pipelines converting large-scale user-generated content into structured datasets, fine-tune transformer-based NLP models, and apply weak supervision with large-scale GPU inference to process 100K+ records efficiently.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label" data-i18n="about.location">Location</span>
+                            <span class="detail-value">Bandung, Indonesia</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label" data-i18n="about.degree">Degree</span>
+                            <span class="detail-value" data-i18n="about.degreeVal">Bachelor of Informatics</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label" data-i18n="about.languages">Languages</span>
+                            <span class="detail-value" data-i18n="about.langVal">Indonesian (Fluent), English (Intermediate)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-title">gazell.py</span>
+                        </div>
+                        <pre class="code-body"><code><span class="kw">class</span> <span class="cls">DataEngineer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="self">self</span>):
+        <span class="self">self</span>.name = <span class="str">"Gazell Arrafi"</span>
+        <span class="self">self</span>.role = <span class="str">"Data Automation &amp; NLP"</span>
+        <span class="self">self</span>.tools = [
+            <span class="str">"Python"</span>, <span class="str">"Playwright"</span>,
+            <span class="str">"Selenium"</span>, <span class="str">"Pandas"</span>,
+            <span class="str">"HuggingFace"</span>, <span class="str">"PyTorch"</span>
+        ]
+
+    <span class="kw">def</span> <span class="fn">process</span>(<span class="self">self</span>, raw_data):
+        data = <span class="self">self</span>.scrape(raw_data)
+        data = <span class="self">self</span>.clean(data)
+        data = <span class="self">self</span>.analyze(data)
+        <span class="kw">return</span> data  <span class="cmt"># insight-ready</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-i18n="exp.title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Automation & NLP Engineer</h3>
+                                <p class="timeline-company">SocialX — Bandung</p>
+                            </div>
+                            <span class="timeline-date">Jan 2026 — Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp.job1.li1">Designed automated pipelines converting large-scale user-generated content into structured, insight-ready datasets.</li>
+                            <li data-i18n="exp.job1.li2">Fine-tuned transformer-based NLP models for multi-label classification with imbalance handling and custom evaluation metrics.</li>
+                            <li data-i18n="exp.job1.li3">Applied weak supervision and large-scale GPU inference to process 100K+ records efficiently.</li>
+                            <li data-i18n="exp.job1.li4">Produced decision-ready analytical reports and network-based insights for stakeholders.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Web Scraper Specialist</h3>
+                                <p class="timeline-company">SocialX — Bandung</p>
+                            </div>
+                            <span class="timeline-date">Aug 2025 — Dec 2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp.job2.li1">Designing and implementing automated scrapers using Playwright, Selenium, and BeautifulSoup.</li>
+                            <li data-i18n="exp.job2.li2">Maintaining all scrapers to remain functional as websites update their layout or anti-bot mechanisms.</li>
+                            <li data-i18n="exp.job2.li3">Monitoring servers, job queues, and request pipelines to ensure reliable data collection.</li>
+                            <li data-i18n="exp.job2.li4">Optimizing scraper performance, including speed, stability, and error handling.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 data-i18n="exp.job3.title">Final Project — Restaurant Recommendation System</h3>
+                                <p class="timeline-company">Telkom University — Bandung</p>
+                            </div>
+                            <span class="timeline-date">Feb 2025 — Jun 2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp.job3.li1">Developed a program to scrape Google Maps reviews using Python and the Selenium library.</li>
+                            <li data-i18n="exp.job3.li2">Built a restaurant recommendation system based on user reviews, utilizing Python and the spaCy library.</li>
+                            <li data-i18n="exp.job3.li3">Applying the hybrid method combined with sentiment analysis, resulted in a 2% increase in accuracy.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>IT Help Desk</h3>
+                                <p class="timeline-company">PT POS Indonesia — Bandung</p>
+                            </div>
+                            <span class="timeline-date">Jun 2024 — Aug 2024</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp.job4.li1">Developed an efficient Python-based web scraping program to extract and process 13 million data points from UMKM websites.</li>
+                            <li data-i18n="exp.job4.li2">Visualized and analyzed the scraped UMKM data using Excel, transforming raw data into actionable insights.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-i18n="proj.title">Featured Projects</h2>
+            <p class="section-subtitle" data-i18n="proj.subtitle">Real-world data pipelines I built at SocialX — from scraping to insight-ready deliverables.</p>
+
+            <div class="projects-grid">
+                <!-- Project 1: Airport ASQ -->
+                <div class="project-card" data-aos>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L2 8.67l7.8 3.53L22 2zM22 2l-10.13 12.2L15.33 22 22 2z"/><path d="M9.8 12.2l2.07 5.87"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Scraping</span>
+                            <span class="tag">DistilBERT</span>
+                            <span class="tag">Gemini API</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj.airport.title">Airport Service Quality (ASQ) Analysis</h3>
+                    <p class="project-desc" data-i18n="proj.airport.desc">End-to-end pipeline analyzing 181,000+ Google Maps reviews from 3 international airports (Soekarno-Hatta, Changi, Suvarnabhumi). Classified reviews into 8 ASQ dimensions using a hybrid Gemini + DistilBERT approach.</p>
+
+                    <div class="project-pipeline">
+                        <h4 data-i18n="proj.pipeline">Pipeline</h4>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-text" data-i18n="proj.airport.s1">Scraped 181K+ reviews from Google Maps (3 airports)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-text" data-i18n="proj.airport.s2">Merged multi-source data & translated multilingual reviews via Gemini 2.5 Flash (batch 150, 5 workers)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-text" data-i18n="proj.airport.s3">Fine-tuned DistilBERT for 3-class sentiment (10K samples/class, 80/10/10 split)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">04</span>
+                                <span class="step-text" data-i18n="proj.airport.s4">ASQ classification: Gemini labeled 15K samples → trained DistilBERT multi-label model with weighted BCE loss</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">05</span>
+                                <span class="step-text" data-i18n="proj.airport.s5">Extracted top complaint topics per airport with Gemini, mapped to ASQ dimensions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span><span>Gemini API</span><span>PyTorch</span><span>HuggingFace</span><span>DistilBERT</span><span>Pandas</span><span>Google Colab</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: LinkedIn -->
+                <div class="project-card" data-aos>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Scraping</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">Gemini AI</span>
+                            <span class="tag">Data Pipeline</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj.linkedin.title">LinkedIn Freelancer Profiling & Salary Estimation</h3>
+                    <p class="project-desc" data-i18n="proj.linkedin.desc">Automated pipeline scraping 356 Indonesian freelancer profiles across 3 categories (Tech, Creative, Gig/Service), enriched with AI-powered salary estimation using Gemini 2.5 Flash as an Indonesian labor market analyst.</p>
+
+                    <div class="project-pipeline">
+                        <h4 data-i18n="proj.pipeline">Pipeline</h4>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-text" data-i18n="proj.linkedin.s1">Scraped 356 LinkedIn profiles via Playwright with anti-detection (random delays, scroll simulation)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-text" data-i18n="proj.linkedin.s2">Parsed HTML with BeautifulSoup, extracted 22+ fields (experience, skills, posts, connections)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-text" data-i18n="proj.linkedin.s3">Built scoring system: Occupation Score (1-10), Education Score (1-5), Seniority Classification</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">04</span>
+                                <span class="step-text" data-i18n="proj.linkedin.s4">Gemini 2.5 Flash estimated salaries with Indonesian market benchmarks (10 concurrent workers)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">05</span>
+                                <span class="step-text" data-i18n="proj.linkedin.s5">Filtered, formatted, and delivered multi-sheet styled Excel workbook (5-6 sheets)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span><span>Playwright</span><span>BeautifulSoup</span><span>Gemini API</span><span>langdetect</span><span>Pandas</span><span>openpyxl</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Saham -->
+                <div class="project-card" data-aos>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">IndoBERT</span>
+                            <span class="tag">Scraping</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj.saham.title">Indonesian Stock News Sentiment Analysis</h3>
+                    <p class="project-desc" data-i18n="proj.saham.desc">News sentiment pipeline covering 7 IDX stock tickers (ANTM, DEWA, EMTK, INDF, MAPI, RAJA, TLKM) with 4 years of detik.com articles. Features a sophisticated 4-layer relevance filter to handle ambiguous tickers like RAJA and DEWA.</p>
+
+                    <div class="project-pipeline">
+                        <h4 data-i18n="proj.pipeline">Pipeline</h4>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-text" data-i18n="proj.saham.s1">Scraped detik.com articles for 7 tickers (2 queries each), 10 concurrent threads, 4-year span</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-text" data-i18n="proj.saham.s2">4-layer relevance filter: blacklist → safe tickers → ambiguity resolver → finance context matching</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-text" data-i18n="proj.saham.s3">IndoBERT sentiment classification (Positif/Netral/Negatif) with continuous score [-1.0, +1.0]</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">04</span>
+                                <span class="step-text" data-i18n="proj.saham.s4">Batch job processing with UUID-based orchestration across 3 processing waves</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span><span>requests</span><span>BeautifulSoup</span><span>IndoBERT</span><span>PyTorch</span><span>HuggingFace</span><span>Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Wisata NTB -->
+                <div class="project-card" data-aos>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">SNA</span>
+                            <span class="tag">GIS</span>
+                            <span class="tag">DistilBERT</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj.wisata.title">NTB Tourism Cognitive Dimension & Network Analysis</h3>
+                    <p class="project-desc" data-i18n="proj.wisata.desc">Comprehensive tourism analytics for 15 NTB destinations analyzing 40,000+ Google Maps reviews. Combines sentiment analysis, social network analysis (SNA), 6-dimension cognitive classification, and geospatial visualization.</p>
+
+                    <div class="project-pipeline">
+                        <h4 data-i18n="proj.pipeline">Pipeline</h4>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-text" data-i18n="proj.wisata.s1">Scraped 40K+ reviews from Google Maps across 15 NTB destinations, geocoded coordinates</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-text" data-i18n="proj.wisata.s2">Translated reviews via Gemini 2.5 Flash (batch 50, 8 workers) with checkpoint resume</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-text" data-i18n="proj.wisata.s3">RoBERTa sentiment analysis (twitter-roberta-base-sentiment-latest, batch 64)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">04</span>
+                                <span class="step-text" data-i18n="proj.wisata.s4">SNA: shared-reviewer network → community detection → centrality metrics → Gephi GEXF export</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">05</span>
+                                <span class="step-text" data-i18n="proj.wisata.s5">Cognitive classification: Gemini labeled 10K → DistilBERT multi-label (6 dimensions) → 40K predictions</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">06</span>
+                                <span class="step-text" data-i18n="proj.wisata.s6">Geospatial maps, heatmaps, SNA graphs, and 6-sheet styled Excel client report</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span><span>RoBERTa</span><span>DistilBERT</span><span>Gemini API</span><span>NetworkX</span><span>Gephi</span><span>contextily</span><span>PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos>
+                    <div class="skill-cat-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <h3 data-i18n="skills.cat1">Programming & Scraping</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Python</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Playwright</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Selenium</div>
+                        <div class="skill-item"><span class="skill-dot"></span>BeautifulSoup</div>
+                        <div class="skill-item"><span class="skill-dot"></span>requests</div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos>
+                    <div class="skill-cat-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        <h3 data-i18n="skills.cat2">NLP & Machine Learning</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>PyTorch</div>
+                        <div class="skill-item"><span class="skill-dot"></span>HuggingFace Transformers</div>
+                        <div class="skill-item"><span class="skill-dot"></span>DistilBERT / RoBERTa / IndoBERT</div>
+                        <div class="skill-item"><span class="skill-dot"></span>spaCy</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Gemini API</div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos>
+                    <div class="skill-cat-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        <h3 data-i18n="skills.cat3">Data & Analysis</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Pandas / NumPy</div>
+                        <div class="skill-item"><span class="skill-dot"></span>SQL</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Excel / openpyxl</div>
+                        <div class="skill-item"><span class="skill-dot"></span>NetworkX / Gephi</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Data Pipelines</div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos>
+                    <div class="skill-cat-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <h3 data-i18n="skills.cat4">Web & Frontend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>HTML / CSS / JavaScript</div>
+                        <div class="skill-item"><span class="skill-dot"></span>React</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Responsive Design</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title" data-i18n="edu.title">Education</h2>
+            <div class="edu-grid">
+                <div class="edu-card" data-aos>
+                    <div class="edu-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+                    </div>
+                    <h3>Universitas Telkom</h3>
+                    <p class="edu-degree" data-i18n="edu.degree1">Bachelor of Informatics</p>
+                    <p class="edu-date">Sep 2021 — Sep 2025</p>
+                    <div class="edu-gpa">GPA: <strong>3.68</strong> / 4.00</div>
+                </div>
+                <div class="edu-card" data-aos>
+                    <div class="edu-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                    </div>
+                    <h3>SMA Darul Hikam</h3>
+                    <p class="edu-degree" data-i18n="edu.degree2">High School Diploma — IPA</p>
+                    <p class="edu-date">Jul 2018 — Jul 2021</p>
+                </div>
+                <div class="edu-card" data-aos>
+                    <div class="edu-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 9.5h20"/></svg>
+                    </div>
+                    <h3>ECCT — Home Edition</h3>
+                    <p class="edu-degree" data-i18n="edu.cert1">English Communication Certification</p>
+                    <p class="edu-date">May 2024 — May 2030</p>
+                    <div class="edu-gpa" data-i18n="edu.certScore">Score: <strong>3.75</strong> / 4.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Interested in working together? Feel free to reach out.</p>
+            <div class="contact-grid">
+                <a href="mailto:mgazell04@gmail.com" class="contact-card" data-aos>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">mgazell04@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/GazellArf/" target="_blank" rel="noopener" class="contact-card" data-aos>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">GazellArf</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Muhammad Gazell Arrafi Asmara. <span data-i18n="footer.text">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
