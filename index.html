@@ -54,10 +54,14 @@
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">View My Work</a>
                 <a href="#contact" class="btn btn-outline" data-i18n="hero.cta2">Get In Touch</a>
+                <a href="../CV_GAZELL.pdf" download class="btn btn-ghost" data-i18n="hero.cv">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 6px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                </a>
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-number" data-count="5">0</span>
                     <span class="stat-label" data-i18n="hero.stat1">Major Projects</span>
                 </div>
                 <div class="stat">
@@ -82,7 +86,7 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p data-i18n="about.p1">Informatics graduate from Telkom University (GPA 3.68/4.00) with hands-on experience in Python, web scraping, data automation, and NLP. I specialize in building end-to-end data pipelines — from collecting raw data at scale to producing structured, insight-ready datasets.</p>
-                    <p data-i18n="about.p2">Currently working as a Data Automation & NLP Engineer at SocialX, where I design automated pipelines converting large-scale user-generated content into structured datasets, fine-tune transformer-based NLP models, and apply weak supervision with large-scale GPU inference to process 100K+ records efficiently.</p>
+                    <p data-i18n="about.p2">Previously worked as a Data Automation & NLP Engineer at SocialX, where I designed automated pipelines converting large-scale user-generated content into structured datasets, fine-tuned transformer-based NLP models, and applied weak supervision with large-scale GPU inference to process 100K+ records efficiently.</p>
                     <div class="about-details">
                         <div class="detail-item">
                             <span class="detail-label" data-i18n="about.location">Location</span>
@@ -140,7 +144,7 @@
                                 <h3>Data Automation & NLP Engineer</h3>
                                 <p class="timeline-company">SocialX — Bandung</p>
                             </div>
-                            <span class="timeline-date">Jan 2026 — Present</span>
+                            <span class="timeline-date">Jan 2026 — Mar 2026</span>
                         </div>
                         <ul class="timeline-list">
                             <li data-i18n="exp.job1.li1">Designed automated pipelines converting large-scale user-generated content into structured, insight-ready datasets.</li>
@@ -181,9 +185,9 @@
                             <span class="timeline-date">Feb 2025 — Jun 2025</span>
                         </div>
                         <ul class="timeline-list">
-                            <li data-i18n="exp.job3.li1">Developed a program to scrape Google Maps reviews using Python and the Selenium library.</li>
-                            <li data-i18n="exp.job3.li2">Built a restaurant recommendation system based on user reviews, utilizing Python and the spaCy library.</li>
-                            <li data-i18n="exp.job3.li3">Applying the hybrid method combined with sentiment analysis, resulted in a 2% increase in accuracy.</li>
+                            <li data-i18n="exp.job3.li1">Collected restaurant review data from Google Maps using Python and Selenium to build a dataset for recommendation modeling.</li>
+                            <li data-i18n="exp.job3.li2">Developed a restaurant recommendation system using a hybrid recommendation algorithm integrated with sentiment analysis (spaCy) to capture user opinion from textual reviews.</li>
+                            <li data-i18n="exp.job3.li3">Enhanced model performance, achieving 2% improvement in recommendation accuracy compared to the baseline hybrid model.</li>
                         </ul>
                     </div>
                 </div>
@@ -236,23 +240,27 @@
                         <div class="pipeline-steps">
                             <div class="pipeline-step">
                                 <span class="step-num">01</span>
-                                <span class="step-text" data-i18n="proj.airport.s1">Scraped 181K+ reviews from Google Maps (3 airports)</span>
+                                <span class="step-text" data-i18n="proj.airport.s1">Scraped 181K+ Google Maps reviews from 3 airports (CGK, SIN, BKK) using Selenium with pagination handling</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">02</span>
-                                <span class="step-text" data-i18n="proj.airport.s2">Merged multi-source data & translated multilingual reviews via Gemini 2.5 Flash (batch 150, 5 workers)</span>
+                                <span class="step-text" data-i18n="proj.airport.s2">Cleaned & merged multi-source data, translated multilingual reviews to English via Gemini 2.5 Flash (batch 150, 5 workers)</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">03</span>
-                                <span class="step-text" data-i18n="proj.airport.s3">Fine-tuned DistilBERT for 3-class sentiment (10K samples/class, 80/10/10 split)</span>
+                                <span class="step-text" data-i18n="proj.airport.s3">Fine-tuned DistilBERT for 3-class sentiment (30K balanced samples, 80/10/10 split) — applied to all 181K reviews</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">04</span>
-                                <span class="step-text" data-i18n="proj.airport.s4">ASQ classification: Gemini labeled 15K samples → trained DistilBERT multi-label model with weighted BCE loss</span>
+                                <span class="step-text" data-i18n="proj.airport.s4">Gemini weak-labeled 15K samples across 8 ASQ dimensions → trained DistilBERT multi-label classifier with weighted BCE loss</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">05</span>
-                                <span class="step-text" data-i18n="proj.airport.s5">Extracted top complaint topics per airport with Gemini, mapped to ASQ dimensions</span>
+                                <span class="step-text" data-i18n="proj.airport.s5">Extracted top complaint topics per airport via Gemini, mapped each to ASQ dimensions for root-cause analysis</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">06</span>
+                                <span class="step-text" data-i18n="proj.airport.s6">Delivered multi-sheet Excel dashboard: sentiment distribution, ASQ comparison across airports, complaint rankings, and trend analysis</span>
                             </div>
                         </div>
                     </div>
@@ -309,7 +317,60 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Saham -->
+                <!-- Project 3: StockOverview -->
+                <div class="project-card" data-aos>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Data Viz</span>
+                            <span class="tag">PDF Extraction</span>
+                            <span class="tag">Network Graph</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj.stockoverview.title">IDX Shareholder Explorer — StockOverview</h3>
+                    <p class="project-desc" data-i18n="proj.stockoverview.desc">Interactive web dashboard visualizing Indonesian stock exchange (IDX) shareholder data from KSEI. Features force-directed network graphs, conglomerate group mapping (Astra, Salim, Sinar Mas, etc.), investor search, market composition charts, and free float scanner — all built with vanilla JavaScript and Canvas API.</p>
+
+                    <div class="project-pipeline">
+                        <h4 data-i18n="proj.pipeline">Pipeline</h4>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-text" data-i18n="proj.stockoverview.s1">Extracted shareholder data from KSEI PDF reports (ownership >1%) into structured Excel/JSON</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-text" data-i18n="proj.stockoverview.s2">Parsed and indexed records by stock code & investor name, computed metadata (free float, local/foreign ratio)</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-text" data-i18n="proj.stockoverview.s3">Built interactive dashboard with search autocomplete, top investors ranking, and market composition filters</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">04</span>
+                                <span class="step-text" data-i18n="proj.stockoverview.s4">Rendered force-directed network graph on Canvas with drag, zoom, pan, and double-click navigation</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">05</span>
+                                <span class="step-text" data-i18n="proj.stockoverview.s5">Mapped 17+ conglomerate groups (ownership & affiliation-based) with color-coded badges and group explorer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>JavaScript</span><span>HTML/CSS</span><span>Canvas API</span><span>esbuild</span><span>PDF Extraction</span><span>Data Visualization</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://stockoverview.site/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 6px;"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Saham Sentiment -->
                 <div class="project-card" data-aos>
                     <div class="project-header">
                         <div class="project-icon">
@@ -330,19 +391,23 @@
                         <div class="pipeline-steps">
                             <div class="pipeline-step">
                                 <span class="step-num">01</span>
-                                <span class="step-text" data-i18n="proj.saham.s1">Scraped detik.com articles for 7 tickers (2 queries each), 10 concurrent threads, 4-year span</span>
+                                <span class="step-text" data-i18n="proj.saham.s1">Scraped 4 years of detik.com articles for 7 IDX tickers (2 queries each, 10 concurrent threads)</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">02</span>
-                                <span class="step-text" data-i18n="proj.saham.s2">4-layer relevance filter: blacklist → safe tickers → ambiguity resolver → finance context matching</span>
+                                <span class="step-text" data-i18n="proj.saham.s2">Applied 4-layer relevance filter: blacklist → safe tickers → ambiguity resolver → finance context matching</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">03</span>
-                                <span class="step-text" data-i18n="proj.saham.s3">IndoBERT sentiment classification (Positif/Netral/Negatif) with continuous score [-1.0, +1.0]</span>
+                                <span class="step-text" data-i18n="proj.saham.s3">Classified sentiment with IndoBERT (Positif/Netral/Negatif) producing continuous score [-1.0, +1.0] per article</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">04</span>
-                                <span class="step-text" data-i18n="proj.saham.s4">Batch job processing with UUID-based orchestration across 3 processing waves</span>
+                                <span class="step-text" data-i18n="proj.saham.s4">Orchestrated batch processing with UUID-based job tracking across 3 sequential waves</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">05</span>
+                                <span class="step-text" data-i18n="proj.saham.s5">Delivered Excel dashboard: sentiment trends per ticker, monthly aggregation, score distribution, and cross-ticker comparison</span>
                             </div>
                         </div>
                     </div>
@@ -373,27 +438,31 @@
                         <div class="pipeline-steps">
                             <div class="pipeline-step">
                                 <span class="step-num">01</span>
-                                <span class="step-text" data-i18n="proj.wisata.s1">Scraped 40K+ reviews from Google Maps across 15 NTB destinations, geocoded coordinates</span>
+                                <span class="step-text" data-i18n="proj.wisata.s1">Scraped 40K+ Google Maps reviews from 15 NTB destinations with geocoded coordinates via Selenium</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">02</span>
-                                <span class="step-text" data-i18n="proj.wisata.s2">Translated reviews via Gemini 2.5 Flash (batch 50, 8 workers) with checkpoint resume</span>
+                                <span class="step-text" data-i18n="proj.wisata.s2">Translated multilingual reviews to English via Gemini 2.5 Flash (batch 50, 8 workers) with checkpoint resume</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">03</span>
-                                <span class="step-text" data-i18n="proj.wisata.s3">RoBERTa sentiment analysis (twitter-roberta-base-sentiment-latest, batch 64)</span>
+                                <span class="step-text" data-i18n="proj.wisata.s3">Classified sentiment using RoBERTa (twitter-roberta-base-sentiment-latest, batch 64) on all 40K reviews</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">04</span>
-                                <span class="step-text" data-i18n="proj.wisata.s4">SNA: shared-reviewer network → community detection → centrality metrics → Gephi GEXF export</span>
+                                <span class="step-text" data-i18n="proj.wisata.s4">Built shared-reviewer SNA network → community detection → centrality metrics → exported GEXF for Gephi</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">05</span>
-                                <span class="step-text" data-i18n="proj.wisata.s5">Cognitive classification: Gemini labeled 10K → DistilBERT multi-label (6 dimensions) → 40K predictions</span>
+                                <span class="step-text" data-i18n="proj.wisata.s5">Gemini weak-labeled 10K samples → trained DistilBERT multi-label classifier (6 cognitive dimensions) → predicted 40K reviews</span>
                             </div>
                             <div class="pipeline-step">
                                 <span class="step-num">06</span>
-                                <span class="step-text" data-i18n="proj.wisata.s6">Geospatial maps, heatmaps, SNA graphs, and 6-sheet styled Excel client report</span>
+                                <span class="step-text" data-i18n="proj.wisata.s6">Generated geospatial maps, heatmaps, and SNA graphs as visual assets</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">07</span>
+                                <span class="step-text" data-i18n="proj.wisata.s7">Delivered 7-sheet styled Excel report: sentiment per destination, cognitive breakdown, SNA metrics, ranking, and recommendations</span>
                             </div>
                         </div>
                     </div>
