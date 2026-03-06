@@ -356,12 +356,12 @@ body {
 .btn-ghost {
     background: transparent;
     color: var(--text-muted);
-    border: 1px solid transparent;
+    border: 1px solid var(--border);
 }
 
 .btn-ghost:hover {
     color: var(--accent);
-    border-color: var(--border);
+    border-color: var(--accent);
     transform: translateY(-2px);
 }
 
