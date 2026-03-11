@@ -61,7 +61,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-number" data-count="6">0</span>
                     <span class="stat-label" data-i18n="hero.stat1">Major Projects</span>
                 </div>
                 <div class="stat">
@@ -166,10 +166,10 @@
                             <span class="timeline-date">Aug 2025 — Dec 2025</span>
                         </div>
                         <ul class="timeline-list">
-                            <li data-i18n="exp.job2.li1">Designing and implementing automated scrapers using Playwright, Selenium, and BeautifulSoup.</li>
-                            <li data-i18n="exp.job2.li2">Maintaining all scrapers to remain functional as websites update their layout or anti-bot mechanisms.</li>
-                            <li data-i18n="exp.job2.li3">Monitoring servers, job queues, and request pipelines to ensure reliable data collection.</li>
-                            <li data-i18n="exp.job2.li4">Optimizing scraper performance, including speed, stability, and error handling.</li>
+                            <li data-i18n="exp.job2.li1">Developed automated web data collection pipelines using Playwright, Selenium, and BeautifulSoup to gather large-scale structured datasets.</li>
+                            <li data-i18n="exp.job2.li2">Maintained and adapted scrapers to handle website layout changes and anti-bot protections, ensuring continuous data availability.</li>
+                            <li data-i18n="exp.job2.li3">Monitored servers, job queues, and request pipelines to maintain stable and reliable data extraction workflows.</li>
+                            <li data-i18n="exp.job2.li4">Optimized scraper performance through improved speed, error handling, and system stability, enabling efficient large-scale data collection.</li>
                         </ul>
                     </div>
                 </div>
@@ -203,8 +203,9 @@
                             <span class="timeline-date">Jun 2024 — Aug 2024</span>
                         </div>
                         <ul class="timeline-list">
-                            <li data-i18n="exp.job4.li1">Developed an efficient Python-based web scraping program to extract and process 13 million data points from UMKM websites.</li>
-                            <li data-i18n="exp.job4.li2">Visualized and analyzed the scraped UMKM data using Excel, transforming raw data into actionable insights.</li>
+                            <li data-i18n="exp.job4.li1">Developed a Python-based web scraping system to extract and process 13M+ UMKM data points from government websites.</li>
+                            <li data-i18n="exp.job4.li2">Optimized scraping performance to efficiently handle large-scale data collection and processing.</li>
+                            <li data-i18n="exp.job4.li3">Analyzed and visualized the collected data using Excel, transforming raw datasets into actionable insights.</li>
                         </ul>
                     </div>
                 </div>
@@ -469,6 +470,53 @@
 
                     <div class="project-tech">
                         <span>Python</span><span>RoBERTa</span><span>DistilBERT</span><span>Gemini API</span><span>NetworkX</span><span>Gephi</span><span>contextily</span><span>PyTorch</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Bandung Mall Sentiment -->
+                <div class="project-card" data-aos>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Scraping</span>
+                            <span class="tag">Sentiment</span>
+                            <span class="tag">Excel Report</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj.mall.title">Bandung Mall Sentiment Analysis</h3>
+                    <p class="project-desc" data-i18n="proj.mall.desc">Sentiment analysis pipeline processing 56,856 Google Maps reviews from 3 major malls in Bandung (Cihampelas Walk, Bandung Indah Plaza, Istana Plaza). Classified reviews into Positive/Neutral/Negative with high-confidence NLP scoring (avg 93.2%), delivered as a comprehensive 5-sheet Excel dashboard.</p>
+
+                    <div class="project-pipeline">
+                        <h4 data-i18n="proj.pipeline">Pipeline</h4>
+                        <div class="pipeline-steps">
+                            <div class="pipeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-text" data-i18n="proj.mall.s1">Scraped 56,856 Google Maps reviews from 3 Bandung malls using Selenium with date & pagination handling</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-text" data-i18n="proj.mall.s2">Cleaned and structured review data: extracted reviewer name, date, rating, and full review text per mall</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-text" data-i18n="proj.mall.s3">Classified sentiment (Positif/Netral/Negatif) using NLP model with confidence scoring — avg confidence 93.2%</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">04</span>
+                                <span class="step-text" data-i18n="proj.mall.s4">Aggregated metrics per mall: sentiment distribution, average rating (4.5/5), and top positive/negative reviews</span>
+                            </div>
+                            <div class="pipeline-step">
+                                <span class="step-num">05</span>
+                                <span class="step-text" data-i18n="proj.mall.s5">Delivered 5-sheet styled Excel report: Dashboard overview, full sentiment data, top positive, top negative, and per-mall breakdown</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span><span>Selenium</span><span>NLP</span><span>Pandas</span><span>openpyxl</span><span>Excel Dashboard</span>
                     </div>
                 </div>
             </div>
